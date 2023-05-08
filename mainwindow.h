@@ -19,7 +19,9 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    Matrix loadFromFile(const QString &filepath);
+    Matrix LoadFromFile(const QString &filepath);
 
+private slots:
+    void ActionImportClicked();
 };
 #endif // MAINWINDOW_H
