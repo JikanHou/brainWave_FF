@@ -3,18 +3,19 @@
 #include <QVector>
 
 class Matrix{    
-protected:
+private:
     QVector<QVector<double>> mat;
+    bool CheckValidate(int row, int col);
 
 public:
-    Matrix(int row = 0, int col = 0);
-    int row();
-    int col();
-    QVector<double> &addRow();
+    Matrix();
+    int Rown();
+    void PushBack(const QVector<double> &t);
+    bool SetVal(int row, int col, double val);
+    double GetVal(int row, int col);
+
+    const QVector<double> GetRow(int row) const;
     void clear();
-    void resize(int row, int col);
-    QVector<double> &operator [](const int x);
-    void output();
 };
 
 #endif // MATRIX_H

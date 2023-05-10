@@ -12,11 +12,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     matrix.cpp \
+    patientinfo.cpp \
     settingswindow.cpp
 
 HEADERS += \
     mainwindow.h \
     matrix.h \
+    patientinfo.h \
     settingswindow.h
 
 FORMS += \

@@ -2,14 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "matrix.h"
+#include "patientinfo.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow{
     Q_OBJECT
 
 public:
@@ -18,10 +17,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    PatientInfo *currentInfo;
 
-    Matrix LoadFromFile(const QString &filepath);
+    PatientInfo LoadFromFile(const QString &filepath);
+    void ShowInfo(const PatientInfo &info);
 
 private slots:
-    void ActionImportClicked();
+    void on_actionImport_triggered();
+    void on_actionAnalyse_triggered();
 };
 #endif // MAINWINDOW_H
