@@ -7,14 +7,36 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>329</height>
+    <height>330</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>330</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>330</height>
+   </size>
   </property>
   <property name="contextMenuPolicy">
    <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>脑电波分析</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Resouce.qrc">
+    <normaloff>:/Icons/favicon.ico</normaloff>:/Icons/favicon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="contextMenuPolicy">
@@ -152,6 +174,7 @@
    </attribute>
    <addaction name="actionAnalyse"/>
    <addaction name="actionImport"/>
+   <addaction name="actionSettings"/>
   </widget>
   <action name="actionImport">
    <property name="checkable">
@@ -181,7 +204,14 @@
     <bool>true</bool>
    </property>
   </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resouce.qrc"/>
+ </resources>
  <connections/>
 </ui>

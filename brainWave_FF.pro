@@ -1,4 +1,5 @@
-QT       += core gui
+QT += core gui
+QT += printsupport
 QT += core5compat
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,12 +14,14 @@ SOURCES += \
     mainwindow.cpp \
     matrix.cpp \
     patientinfo.cpp \
+    qcustomplot.cpp \
     settingswindow.cpp
 
 HEADERS += \
     mainwindow.h \
     matrix.h \
     patientinfo.h \
+    qcustomplot.h \
     settingswindow.h
 
 FORMS += \
@@ -29,3 +32,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Resouce.qrc
