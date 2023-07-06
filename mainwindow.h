@@ -23,6 +23,7 @@ private:
     PatientInfo LoadFromFile(const QString &filepath);
     void ShowInfo(const PatientInfo &info);
     void AnalyseBw(QString filename, QVector<double> bw);
+    void initSettings();
 
 private slots:
     void on_actionImport_triggered();
